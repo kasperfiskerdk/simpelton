@@ -1,0 +1,14 @@
+name: runner test
+on:
+    workflow_dispatch:
+jobs:
+    build:
+        runs-on: arc-runner-set-hy
+        container:
+            image: registry.git.vikingsoftware.com/kasper/hydrema
+            credentials:
+                username: kasper
+                password: ${{ secrets.VIKING_GITLAB_DOCKER_REGISTRY_TOKEN }}
+        steps:
+            - name: Do stuff
+              run: ls
