@@ -4,7 +4,7 @@ on:
 jobs:
     build:
         runs-on: arc-runner-set-hy
-        #container:
+        container: ubuntu:20.04
         #    image: registry.git.vikingsoftware.com/kasper/hydrema
         #    credentials:
         #        username: kasper
