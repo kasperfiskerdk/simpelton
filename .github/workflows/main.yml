@@ -5,11 +5,27 @@ jobs:
     build:
         runs-on: arc-runner-set-hy
         container: 
-            image: ubuntu:20.04
+            image: ubuntu-20.04
         #    image: registry.git.vikingsoftware.com/kasper/hydrema
         #    credentials:
         #        username: kasper
         #        password: ${{ secrets.VIKING_GITLAB_DOCKER_REGISTRY_TOKEN }}
         steps:
-            - name: Do stuff
-              run: ls
+            - name: Checking out branch from project simpleton
+              uses: actions/checkout@3
+
+            - name: Creating build directroy
+              run: mkdir build
+
+            - name: Running CMake for build of Simpleton project
+              run: cmake -S . -B ./build -GNinja -DCMAKE_BUILD_TYPE=Release
+
+            - name: Compiling Simpleton
+              run: cmake --build ./build --target all
+
+            - name: Staging binary for Simpleton
+              run: cmake --install ./build --prefix ./build/staging
+
+            - name: Packaging binaries for simpleton
+              run: cpack -B ./build/staging --config ./src/CPackConfigSimpleton.cmake -C Release
+
