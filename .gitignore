@@ -1,0 +1,4 @@
+/build/
+/staging/
+/_CPack_Packages/
+*.txt.autosave
