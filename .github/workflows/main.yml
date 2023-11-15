@@ -5,7 +5,7 @@ jobs:
     build:
         runs-on: arc-runner-set-hy
         container: 
-            image: ubuntu-20.04
+            image: ghcr.io/kasperfiskerdk/simpleton:0.1
         #    image: registry.git.vikingsoftware.com/kasper/hydrema
         #    credentials:
         #        username: kasper
