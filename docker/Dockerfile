@@ -26,7 +26,8 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y \
         tzdata \
         ninja-build \
         git \
-        wget
+        wget \
+        docker
 
 
 # As ubuntu 20.04 is very old, newer versions of CMake
