@@ -25,6 +25,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y \
         build-essential \
         tzdata \
         ninja-build \
+        git \
         wget
 
 
