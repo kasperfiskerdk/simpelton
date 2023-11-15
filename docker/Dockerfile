@@ -6,6 +6,17 @@
 # -i interactive
 # -t make tty
 
+# Login to GitHub Container Registry (ghcr.io)
+# $ export CR_PAT=YOUR_TOKEN; echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+
+# Tag a local image with ghcr.io/kasperfiskerdk/simpleton.
+# $ docker build --tag ghcr.io/kasperfiskerdk/simpleton ./docker
+
+# Push local image to GitHub Container Registry (ghcr.io)
+# $ docker images   to see local images
+# $ docker push ghcr.io/kasperfiskerdk/simpleton:0.1
+
+
 
 FROM ubuntu:20.04
 WORKDIR .
