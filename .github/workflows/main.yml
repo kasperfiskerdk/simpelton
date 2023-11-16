@@ -33,5 +33,5 @@ jobs:
             - uses: actions/upload-artifact@v3
               with:
                 name: simpleton-0.0.1-Linux.tar.gz
-                path: simpleton-*.tar.gz
+                path: build/simpleton-0.0.1-Linux.tar.gz
                 retention-days: 5
