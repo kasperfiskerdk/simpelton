@@ -8,7 +8,7 @@ on:
 jobs:
     build:
         runs-on: self-hosted
-        #container:
+        container:
             #image: ghcr.io/actions/actions-runner:latest
             image: ghcr.io/kasperfiskerdk/simpleton:latest
 
