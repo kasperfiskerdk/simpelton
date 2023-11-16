@@ -31,3 +31,8 @@ jobs:
             - name: Packaging binaries for simpleton
               run: cpack -B ./build/staging --config ./src/CPackConfigSimpleton.cmake -C Release
 
+            - uses: actions/upload-artifact@v3
+              with:
+                name: simpleton-0.0.1-Linux.tar.gz
+                path: builds/simpleton-*.tar.gz
+                retention-days: 5
