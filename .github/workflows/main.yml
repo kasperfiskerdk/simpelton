@@ -3,9 +3,9 @@ on:
     workflow_dispatch:
 jobs:
     build:
-        runs-on: arc-runner-set-hy
-        container: 
-            image: ghcr.io/kasperfiskerdk/simpleton:0.1
+        runs-on: bob
+        #container:
+        #    image: ghcr.io/kasperfiskerdk/simpleton:0.1
         #    image: registry.git.vikingsoftware.com/kasper/hydrema
         #    credentials:
         #        username: kasper
