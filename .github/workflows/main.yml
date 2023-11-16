@@ -8,9 +8,9 @@ on:
 jobs:
     build:
         runs-on: self-hosted
-        container:
+        #container:
             #image: ghcr.io/actions/actions-runner:latest
-            image: ghcr.io/kasperfiskerdk/simpleton:0.1
+            image: ghcr.io/kasperfiskerdk/simpleton:latest
 
         steps:
             - name: Checking out branch from project simpleton
