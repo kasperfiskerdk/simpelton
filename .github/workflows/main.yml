@@ -14,7 +14,7 @@ jobs:
 
         steps:
             - name: Checking out branch from project simpleton
-              uses: actions/checkout@v3
+              uses: actions/checkout@v1
 
             - name: Creating build directroy
               run: mkdir build
