@@ -32,7 +32,7 @@ jobs:
 
             - uses: actions/upload-artifact@v3
               with:
-                name: simpleton-0.0.1-Linux.tar.gz
+                name: simpleton-0.0.1-installer
                 path: |
                     build/simpleton-0.0.1-Linux.tar.gz
                     build/simpleton-0.0.1-Linux.sh
