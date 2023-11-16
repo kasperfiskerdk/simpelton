@@ -9,12 +9,11 @@ jobs:
     build:
         runs-on: self-hosted
         container:
-            #image: ghcr.io/actions/actions-runner:latest
             image: ghcr.io/kasperfiskerdk/simpleton:latest
 
         steps:
             - name: Checking out branch from project simpleton
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
 
             - name: Creating build directroy
               run: mkdir build
@@ -29,7 +28,7 @@ jobs:
               run: cmake --install ./build --prefix ./build/staging
 
             - name: Packaging binaries for simpleton
-              run: cpack -B ./build/staging --config ./src/CPackConfigSimpleton.cmake -C Release
+              run: cpack -B ./build --config ./build/CPackConfig.cmake -C Release
 
             - uses: actions/upload-artifact@v3
               with:
