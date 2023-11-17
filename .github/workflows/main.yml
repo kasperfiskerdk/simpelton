@@ -9,7 +9,7 @@ jobs:
     build:
         runs-on: self-hosted
         container:
-            image: ghcr.io/kasperfiskerdk/simpleton:latest
+            image: ghcr.io/kasperfiskerdk/simpleton:0.2
 
         steps:
             - name: Checking out branch from project simpleton
@@ -42,4 +42,4 @@ jobs:
                 name: simpleton-0.0.1-installer-archive
                 path: build/simpleton-0.0.1-Linux.tar.gz
                 retention-days: 5
-                if-no-files-found: warn # 'warn' or 'ignore' are also available, defaults to `warn`
+                if-no-files-found: warn # 'error', 'warn' or 'ignore'
