@@ -3,3 +3,4 @@
 /_CPack_Packages/
 *.txt.autosave
 /CMakeLists.txt.user
+*.o
