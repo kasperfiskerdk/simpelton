@@ -2,5 +2,6 @@
 
 int main(void)
 {
-    std::cout << "Hello simpleton!" << std::endl;
+    int k = 42;
+    std::cout << "Hello simpleton!" << "k:" << k << std::endl;
 }
