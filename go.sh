@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Removing build dir"
+echo "Removing build-dir"
 rm -rf ./build ./staging
 echo "CMake: config step"
 cmake -S . -B ./build  -GNinja -DCMAKE_BUILD_TYPE=Release
